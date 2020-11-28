@@ -7,10 +7,6 @@ print('Starting Here')
 #
 # Examples
 # stutter("incredible") ➞ "in... in... incredible?"
-#
-# stutter("enthusiastic") ➞ "en... en... enthusiastic?"
-#
-# stutter("outstanding") ➞ "ou... ou... outstanding?"
 
 def stutter(word):
 	ans = word[0:2]+'.. '+word[0:2]+'.. '+word
@@ -25,19 +21,11 @@ def stutter(word):
 # str(4) ➞ 4
 #
 # str("4") ➞ 4
-#
-# int("4") ➞ "4"
-#
-# int(4) ➞ "4"
 # You need to create two functions to substitute str() and int(). A function called int_to_str() that converts integers
 # into strings and a function called str_to_int() that converts strings into integers.
 #
 # Examples:
 # int_to_str(4) ➞ "4"
-#
-# str_to_int("4") ➞ 4
-#
-# int_to_str(29348) ➞ "29348"
 
 def int_to_str(num):
 	 print(int(num))
@@ -179,11 +167,154 @@ def fizz_buzz(num):
 	elif(num%3!=0 and num%5!=0):
 		print(num)
 
-fizz_buzz(98)
+# fizz_buzz(98)
 
 ########################################################################################################################
 
 ## Program 6
+
+# Length of Number
+# Create a function that takes a number num and returns its length.
+#
+# Examples
+# number_length(10) ➞ 2
+#
+# number_length(5000) ➞ 4
+#
+# number_length(0) ➞ 1
+
+def number_length(num):
+	return print(len(str(num)))
+
+# number_length(777777777777777777777777777777)
+
+########################################################################################################################
+
+## Program 7
+
+# Right Shift by Division
+# The right shift operation is similar to floor division by powers of two.
+#
+# Sample calculation using the right shift operator ( >> ):
+#
+# 80 >> 3 = floor(80/2^3) = floor(80/8) = 10
+# -24 >> 2 = floor(-24/2^2) = floor(-24/4) = -6
+# -5 >> 1 = floor(-5/2^1) = floor(-5/2) = -3
+# Write a function that mimics (without the use of >>) the right shift operator and returns the result from the two given integers.
+#
+# Examples
+# shift_to_right(80, 3) ➞ 10
+#
+# shift_to_right(-24, 2) ➞ -6
+
+def floor(n):
+    res = int(n)
+    return res if res == n or n >= 0 else res-1
+
+def shift_to_right(x, y):
+	return print(floor(x/2**y))
+
+# shift_to_right(-24, 2)
+
+########################################################################################################################
+
+## Program 8
+# Designing Rugs
+# Write a function that accepts the width and height (m, n) and an optional proc s and generates a list with m elements.
+# Each element is a string consisting of either:
+#
+# The default character (hash #) repeating n times (if no proc is given).
+# The character passed in through the proc repeating n times.
+
+def make_rug(m, n, s):
+
+	part = ''
+	if s:
+		part = [s * n]
+	else:
+		part = ['#' * n]
+
+	for i in range(m):
+		print(part[0])
+
+def make_rug(m, n):
+	part = ''
+	part = ['#' * n]
+	final = []
+	for i in range(m):
+		final.append(part[0])
+	print(final)
+	return final
+
+def rug(m = None, n = None, s = None):
+	part = ''
+	if s:
+		part = [s * n]
+	else:
+		part = ['#' * n]
+
+	final = []
+	for i in range(m):
+		final.append(part[0])
+	print(final)
+	return final
+
+# rug(5,4,'$')
+
+########################################################################################################################
+
+## Program 9
+# A Circle and Two Squares
+# Imagine a circle and two squares: a smaller and a bigger one. For the smaller one, the circle is a circumcircle and for
+# the bigger one, an incircle.
+# Create a function, that takes an integer (radius of the circle) and returns the difference of the areas of the two
+# squares.
+
+def square_areas_difference(r):
+	smaller_sq = (2*r*r)
+	larger_sq = (2*r*2*r)
+
+	print(larger_sq-smaller_sq)
+
+# square_areas_difference(5)
+
+########################################################################################################################
+
+## Program 10
+
+# Calculate the Profit
+# You work for a manufacturer, and have been asked to calculate the total profit made on the sales of a product. You are
+# given a dictionary containing the cost price per unit (in dollars), sell price per unit (in dollars), and the starting
+# inventory. Return the total profit made, rounded to the nearest dollar.
+
+def profit(info):
+	return print(round(info['inventory']*(info['sell_price']-info['cost_price'])))
+
+profit({'cost_price': 32.67, 'sell_price': 45.00, 'inventory': 1200})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
